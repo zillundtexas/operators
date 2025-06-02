@@ -1,0 +1,247 @@
+<html>
+	<head id="j_idt2">
+		<link type="text/css" rel="stylesheet" href="/operators/jakarta.faces.resource/theme.css.xhtml?ln=primefaces-verona-blue&amp;v=14.0.3">
+		<link type="text/css" rel="stylesheet" href="/operators/jakarta.faces.resource/primeicons/primeicons.css.xhtml?ln=primefaces&amp;v=14.0.3">
+		<link rel="stylesheet" href="/operators/jakarta.faces.resource/components.css.xhtml?ln=primefaces&amp;v=14.0.3">
+		<script src="/operators/jakarta.faces.resource/jquery/jquery.js.xhtml?ln=primefaces&amp;v=14.0.3"></script>
+		<script src="/operators/jakarta.faces.resource/jquery/jquery-plugins.js.xhtml?ln=primefaces&amp;v=14.0.3"></script>
+		<script src="/operators/jakarta.faces.resource/core.js.xhtml?ln=primefaces&amp;v=14.0.3"></script>
+		<script src="/operators/jakarta.faces.resource/components.js.xhtml?ln=primefaces&amp;v=14.0.3"></script>
+		<script src="/operators/jakarta.faces.resource/validation/validation.js.xhtml?ln=primefaces&amp;v=14.0.3"></script>
+		<script src="/operators/jakarta.faces.resource/moment/moment.js.xhtml?ln=primefaces&amp;v=14.0.3"></script>
+		<script src="/operators/jakarta.faces.resource/locales/locale-en.js.xhtml?ln=primefaces&amp;v=14.0.3"></script>
+		<script type="text/javascript">
+			if(window.PrimeFaces){
+				PrimeFaces.settings.locale='en_NZ';
+				PrimeFaces.settings.viewId='/pages/home.xhtml';
+				PrimeFaces.settings.contextPath='/operators';
+				PrimeFaces.settings.cookiesSecure=false;
+				PrimeFaces.settings.cookiesSameSite='Strict';
+				PrimeFaces.settings.validateEmptyFields=false;
+				PrimeFaces.settings.considerEmptyStringNull=false;
+			}
+		</script>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="robots" content="noindex, nofollow">
+		<link rel="stylesheet" type="text/css" href="//www.bookmestatic.net.nz/operators/css/font-awesome.min.css" media="all">
+		<link rel="shortcut icon" href="/operators/Book-Me-web-icon.png">
+		<title>Bookme Operators Portal</title>
+		<meta name="robots" content="no index, no follow">
+		<meta http-equiv="cleartype" content="on">
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="language" content="english">
+		<meta charset="UTF-8">
+		<script src="//www.bookmestatic.net.nz/operators/js-100.0/bookme-responsive-header.min.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			function getInternetExplorerVersion()
+			// Returns the version of Internet Explorer or a -1
+			// (indicating the use of another browser).
+			{
+				var rv = -1; // Return value assumes failure.
+				if (navigator.appName == 'Microsoft Internet Explorer')
+				{
+					var ua = navigator.userAgent;
+					var re  = new RegExp("MSIE ([0-9]{1,}[.0-9]{0,})");
+					if (re.exec(ua) != null)
+						rv = parseFloat( RegExp.$1 );
+				}
+				return rv;
+			}
+
+			function browserNotSupported () {
+				var ver = getInternetExplorerVersion();
+				if ( ver > -1)  { document.getElementById('version').textContent= 'Your Internet Explorer version '  + ver + ' is not supported by the Bookme operator portal.'  }
+			}
+
+			function checkVersion()
+			{
+
+				var ver = getInternetExplorerVersion();
+
+				if ( ver > -1 )
+				{
+					if ( ver < 11 )
+						window.location.href = '/operators/doc/BrowserNotSupported.htm'
+
+				}
+
+			}
+
+			checkVersion();
+		</script>
+		<script src="//www.bookmestatic.net.nz/operators/js-100.0/bookme-operator-home.min.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			function handleLoginSubmissionNew(xhr, status, args) {
+				setTimeout(function () {
+					PF('statusDialog').hide();
+				}, 500);
+				if (args.validationFailed || args.passwordsMatchError) {
+					PF('spot').show();
+					$('#email , #password #confirmPassword').unbind('focus');
+					$('#email , #password , #confirmPassword').focus(function () {
+						PF('spot').hide();
+					});
+				}
+
+
+			}
+		</script>
+		<link href="//fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700" rel="stylesheet" type="text/css">
+		<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic,800" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="//www.bookmestatic.net.nz/operators/css-100.0/html5reset-min.css" media="all">
+		<link rel="stylesheet" type="text/css" href="//www.bookmestatic.net.nz/operators/css-100.0/baseBookme-min.css" media="all">
+		<link rel="stylesheet" type="text/css" href="//www.bookmestatic.net.nz/operators/css-100.0/--NEW--snapLarge-min.css" media="all">
+		<link rel="stylesheet" type="text/css" href="//www.bookmestatic.net.nz/operators/css-100.0/--NEW--snapMedium-min.css" media="all">
+		<link rel="stylesheet" type="text/css" href="//www.bookmestatic.net.nz/operators/css-100.0/--NEW--snapSmall-min.css" media="all">
+		<link rel="stylesheet" type="text/css" href="//www.bookmestatic.net.nz/operators/css-100.0/--NEW--snapXSmall-min.css" media="all">
+		<link rel="stylesheet" type="text/css" href="//www.bookmestatic.net.nz/operators/css-100.0/--NEW--snapCustom-min.css" media="all">
+		<link rel="stylesheet" type="text/css" href="operators-2.css" media="all">
+
+</head>
+	<body>
+	
+		<div id="wrapper" class="pageWrapper operatorPortalWrapper plainJane">
+			
+			
+		 	<div id="headerWrapper" class="operatorPortalHeaderWrapper">
+		 		
+		 		<div class="welcome-heading">
+		 			<div class="logo">
+						<a href="https://www.bookme.co.nz/operators">
+							<img src="https://www.bookmestatic.net.nz/operators/images/BMlogoNZ.png">
+						</a>
+					</div>
+					<h1>Operator Portal</h1>
+				</div>
+				
+		 		
+			
+				<div id="hero">
+					<div class="slide active" style="background-image: url('images/trampers-sqr.jpg');"></div>
+					<div class="slide" style="background-image: url('images/backpacker-sqr.jpg');"></div>
+					<div class="slide" style="background-image: url('images/maori-sqr.jpg');"></div>
+					<div class="slide" style="background-image: url('images/fairylights-sqr.jpg');"></div>
+				</div>
+			</div>
+				
+			
+			
+			<div id="j_idt17" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container statusDialog" style="display: none; width: auto; height: auto;" role="dialog" aria-describedby="j_idt17_content" aria-hidden="true" aria-modal="true" aria-labelledby="j_idt17_title">
+				<div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top">
+					<span id="j_idt17_title" class="ui-dialog-title">Logging You In</span>
+				</div>
+				<div class="ui-dialog-content ui-widget-content" id="j_idt17_content" style="height: auto;">
+					<img src="//www.bookmestatic.net.nz/operators/images/ajaxloadingbar.gif">
+				</div>
+			</div>
+			
+			
+			<div id="content" class="check_user operatorPortal">
+			
+				<div id="login_newuser" class="boxWrapper">
+					<div class="boxLeft">
+						<div class="box shadowBox">
+							<form id="login-form" name="login-form" method="post" action="/operators/home" enctype="application/x-www-form-urlencoded" autocomplete="false">
+								<!--<div class="boxRow">
+									<h3>Bookme Operator Login</h3>
+								</div>-->
+								<div id="pnl" class="ui-panel ui-widget ui-widget-content ui-corner-all" data-widget="widget_pnl" role="region">
+									<div id="pnl_content" class="ui-panel-content ui-widget-content">
+										<div class="inputGroup">
+											<input id="email" name="email" type="text" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" aria-required="true" placeholder=" " data-p-rmsg="Your email is required." data-p-vmsg="Invalid email format!" data-p-required="true" data-p-regex="^[_A-Za-z0-9-\+]+(\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\.[A-Za-z0-9]+)*(\.[A-Za-z]{2,})$" data-p-val="jakarta.faces.RegularExpression">
+											<input type="hidden" name="login-form" value="login-form">
+											<label>Operator Email Address</label>
+										</div>
+										<div class="inputGroup">
+											<input id="password" name="password" type="password" class="ui-inputfield ui-widget ui-state-default ui-corner-all" onkeypress="submitOnEnter(event);" placeholder=" " data-p-rmsg="Your password is required.">
+											<label>Password</label>
+										</div>
+									</div>
+								</div>
+								
+								<a id="login" href="#" class="btn btn_large btn_primary ui-commandlink ui-widget" onclick="PrimeFaces.ab({s:&quot;login&quot;,f:&quot;login-form&quot;,u:&quot;growl,message_for_password,message_for_email&quot;,onst:function(cfg){PF('statusDialog').show();;},oner:function(xhr,status,error){PF('statusDialog').hide();;},onco:function(xhr,status,args,data){ handleLoginSubmissionNew(xhr, status, args);},pa:[{name:&quot;requireValidationGrp1&quot;,value:&quot;1&quot;}]});return false;">Login</a>
+								<p class="passwordHelp">
+									<a id="j_idt30" href="#" class="ui-commandlink ui-widget" onclick="PrimeFaces.ab({s:&quot;j_idt30&quot;,f:&quot;login-form&quot;,u:&quot;growl&quot;,onco:function(xhr,status,args,data){handleLoginSubmission(xhr, status, args);}});return false;">
+										Forgot your password?
+									</a>
+									<span id="j_idt33"></span>
+								</p>
+								
+								<input type="hidden" name="jakarta.faces.ViewState" id="j_id1:jakarta.faces.ViewState:0" value="stateless" autocomplete="off">
+								<span id="growl" class="ui-growl-pl" data-widget="widget_growl" data-global="data-global" data-summary="data-summary" data-severity="all,error" data-redisplay="true"></span>
+							</form>
+						</div>
+					</div>
+					
+					<div class="boxRight">
+						<div class="box shadowBox">
+							<div class="boxRow">
+								<h4>Get Listed on Bookme</h4>
+								<p>Are you interested in getting your business listed on Bookme? There are no set-up fees, and Bookme operates on a very fair 'commission on completed sales' basis.</p> 
+								<p>Follow the link below to fill out our short Operator Survey. Once completed, a Bookme representative will be in touch to discuss your listing options.</p>
+							</div>
+							<div class="boxRow">
+								<a class="btn btn_large btn_special href="/operators/newOperatorAccount">Get Listed on Bookme</a>
+							</div>
+							<div class="boxRow contact">
+								<p>For operator or business related queries,<br />please contact our team:</p>
+								<p>
+									<span>
+										<strong>New Zealand/Fiji: </strong>
+										<a href="mailto:info@bookme.co.nz?subject=Bookme Operator Enquiry&amp;body=">info@bookme.co.nz</a>
+									</span>
+									<span>
+										<strong>Australia: </strong>
+										<a href="mailto:info@bookme.com.au?subject=Bookme Operator Enquiry&amp;body=">info@bookme.com.au</a>
+									</span>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			
+				<div id="footWrapper">
+					<div class="copyright">
+						<p>Copyright © 2025 Bookme Limited.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		
+		
+		<div class="ui-dialog-docking-zone"></div>
+		<div id="growl_container" class="ui-growl ui-widget ui-growl-sticky" aria-live="polite" style="z-index: 1001;"></div>
+		<div class="ui-widget-overlay ui-spotlight ui-spotlight-top ui-helper-hidden"></div>
+		<div class="ui-widget-overlay ui-spotlight ui-spotlight-bottom ui-helper-hidden"></div>
+		<div class="ui-widget-overlay ui-spotlight ui-spotlight-left ui-helper-hidden"></div>
+		<div class="ui-widget-overlay ui-spotlight ui-spotlight-right ui-helper-hidden"></div>
+		<div style="z-index: 2147483647 !important; padding: 0px !important; margin: 0px !important; border-radius: 8px !important; position: fixed !important; color-scheme: normal !important; box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 4px 0px, rgba(0, 0, 0, 0.18) 0px 8px 15px 6px !important; border: 1px solid rgba(0, 0, 0, 0.9) !important; overflow: hidden !important; backdrop-filter: blur(20px) !important; background-color: rgba(35, 35, 35, 0.83) !important; top: 643px !important; left: -999999px !important; opacity: 0 !important; visibility: hidden !important; height: 69.5px !important; width: 305px !important;"></div>
+	</body>
+	
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			const slides = document.querySelectorAll('#hero .slide');
+			let currentSlide = 0;
+			const slideInterval = 3000; // Time each slide is visible (5 seconds)
+	
+			function nextSlide() {
+				// Remove 'active' class from current slide
+				slides[currentSlide].classList.remove('active');
+	
+				// Move to the next slide
+				currentSlide = (currentSlide + 1) % slides.length;
+	
+				// Add 'active' class to the next slide
+				slides[currentSlide].classList.add('active');
+			}
+	
+			// Start the slideshow
+			setInterval(nextSlide, slideInterval);
+		});
+	</script>
+</html>
